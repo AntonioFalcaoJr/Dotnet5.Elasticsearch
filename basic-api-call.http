@@ -1,0 +1,17 @@
+# [STRESSOR]
+###
+GET http://localhost:6000/stressor/generate?amount=10
+
+###
+GET http://localhost:6000/stressor/modify?amount=10
+
+### 
+GET http://localhost:6000/stressor/exclude?amount=10
+
+
+# [CLIENT]
+### 
+GET http://localhost:5000/api/v2/card
+
+###
+GET http://localhost:5000/api/v2/card/f694491b-bc98-45bc-af97-67f7ac460908

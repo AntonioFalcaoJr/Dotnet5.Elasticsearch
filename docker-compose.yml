@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+  stressor:
+    image: stressor
+    container_name: stressorelastic
+    build:
+      context: .
+      dockerfile: ./src/Dotnet5.Elasticsearch.Stressor.WebApi/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://*:6000
+    ports:
+      - 6000:6000
+    networks:
+      - elasticsearch 
+
+  client:
+    image: client
+    container_name: clientelastic
+    build:
+      context: .
+      dockerfile: ./src/Dotnet5.Elasticsearch.Client.WebApi/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://*:5000
+    ports:
+      - 5000:5000
+    networks:
+      - elasticsearch
+
+networks:
+  elasticsearch:
+    driver: bridge

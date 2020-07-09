@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Dotnet5.Elasticsearch.Repositories.Abstractions\Dotnet5.Elasticsearch.Repositories.Abstractions.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0-preview.4-runtime.20202.6"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0-preview.4-runtime.20202.6"/>
+    </ItemGroup>
+</Project>

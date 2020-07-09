@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Dotnet5.Elasticsearch.Client.Services\Dotnet5.Elasticsearch.Client.Services.csproj"/>
+        <ProjectReference Include="..\Dotnet5.Elasticsearch.Domain\Dotnet5.Elasticsearch.Domain.csproj"/>
+        <ProjectReference Include="..\Dotnet5.Elasticsearch.Infrastructure\Dotnet5.Elasticsearch.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Dotnet5.Elasticsearch.Repositories\Dotnet5.Elasticsearch.Repositories.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.1"/>
+    </ItemGroup>
+
+</Project>
