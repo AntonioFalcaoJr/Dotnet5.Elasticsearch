@@ -1,18 +1,21 @@
 # .NET 5 + Elasticsearch + NEST
-###### WIP - Work in progress
 
+***WIP - Work in progress***
 
 This project aims to explore how NEST works with Elasticsearch in .NET 5 projects.
 
 ## Getting Started
 
-After the project clone follow the steps described in the [installing](#installing). 
+After the project clone follow the steps described in the [installing](#installing).
 
 > HTTPS
+>
 >```bash
 >git clone https://git-unj.softplan.com.br/antonio.falcao/Dotnet5.Elasticsearch.git
 >```
+>
 > SSH
+>
 >```bash
 >git clone git@git-unj.softplan.com.br:antonio.falcao/Dotnet5.Elasticsearch.git
 >```
@@ -22,16 +25,21 @@ After the project clone follow the steps described in the [installing](#installi
 * [.NET 5](https://github.com/dotnet/core/blob/master/release-notes/5.0/preview/5.0.0-preview.5-install-instructions.md) - The framework used
 
 > To check this functionality:
+>
 >```bash
 >dotnet --version
 >```
+>
 > For more details
+>
 >```bash
 >dotnet --info
 >```
 
 * [Docker](https://www.docker.com/) - The container platform used
+
 > To check this functionality:
+>
 >```bash
 >docker --version
 >```
@@ -62,7 +70,7 @@ It's possible to increase to at least [262144]:
 
 ```bash
 sudo sysctl -w vm.max_map_count=262144
-``` 
+```
 
 > More details about in this [link](https://www.elastic.co/guide/en/elasticsearch/reference/7.5/docker.html#docker-prod-prerequisites)
 
@@ -91,9 +99,7 @@ After providing the necessary infrastructure, we need to define the cluster **in
     "index": "card",
     "node1Uri": "http://192.168.0.27:9200/",
     "node2Uri": "http://192.168.0.27:9201/",
-    "node3Uri": "http://192.168.0.27:9202/",
-    "node4Uri": "http://192.168.0.27:9203/",
-    "node5Uri": "http://192.168.0.27:9204/"
+    "node3Uri": "http://192.168.0.27:9202/"
   }
 }
 ```
@@ -103,7 +109,7 @@ And then set the HTTP client host on [`appsettings`](./src/Dotnet5.Elasticsearch
 ```json
 {
   "ElasticsearchClient": {
-    "Url": "http://192.168.0.27:5000"
+    "Url": "http://localhost:5000"
   }
 }
 ```
@@ -112,61 +118,59 @@ And then set the HTTP client host on [`appsettings`](./src/Dotnet5.Elasticsearch
 
 The respective [compose](./docker-compose.yml) provide the `client` and `stressor` services:
 
-```
+```bash
 docker-compose up -d
 ```
 
-#### Stressor and Client services
+### Stressor and Client services
 
 The **Stressor** service provide  resources to request  _generate_, _modify_, and _remove_ data from Elasticsearch through the **client** service.
 
-Is just run the compose from the app to up both of then in the same network. In this way is possible to use services names on the [appsettings](#app-settings).     
+Is just run the compose from the app to up both of then in the same network. In this way is possible to use services names on the [appsettings](#app-settings).
 
 > The **Client** routing uses the default `http://hostname:port/api/v{version}/controller`. Where  **/v1** is Synchronous and **/v2** is Asynchronous.
-
+>
 > The **Stressor** routing uses the default `http://hostname:port/controller/action`.
 
 To make API calls, you can use the file [./basic-api-call.http](./basic-api-call.http) through extension [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client):
 
 ```http request
-# [STRESSOR]
+# STRESSOR
 ###
 GET http://localhost:6000/stressor/generate?amount=10
-
 ###
 GET http://localhost:6000/stressor/modify?amount=10
-
-### 
+###
 GET http://localhost:6000/stressor/exclude?amount=10
 
-
-# [CLIENT]
-### 
+# CLIENT
+###
 GET http://localhost:5000/api/v2/card
-
 ###
 GET http://localhost:5000/api/v2/card/f694491b-bc98-45bc-af97-67f7ac460908
 ```
 
 ## Built With
 
-##### Microsoft Stack
+### Microsoft Stack
+
 * [.NET 5](https://dotnet.microsoft.com/) - The base framework used
 * [ASP.NET 5](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) - The web framework used
 * [AutoMapper](https://automapper.org/) - Library for mapping objects
 
-##### Elasticsearch Stack
+#### Elasticsearch Stack
+
 * [Elasticsearch](https://www.elastic.co) - Search Engine used.
 * [NEST](https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/nest.html) - Elasticsearch client for .NET
 * [Kibana](https://www.elastic.co/pt/kibana) - Elasticsearch visualize and analyze service
 
 ## Contributing
 
-Available soon! 
+Available soon!
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/AntonioFalcao/SolrDotnetSample/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/AntonioFalcao/SolrDotnetSample/tags).
 
 ## Authors
 
