@@ -170,13 +170,15 @@ Available soon!
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/AntonioFalcao/SolrDotnetSample/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/AntonioFalcao/
+Dotnet5.Elasticsearch /tags).
 
 ## Authors
 
 * **Antônio Falcão** - [GitHub](https://github.com/AntonioFalcao)
 
-> See also the list of [contributors](https://github.com/AntonioFalcao/SolrDotnetSample/graphs/contributors) who participated in this project.
+> See also the list of [contributors](https://github.com/AntonioFalcao/
+Dotnet5.Elasticsearch /graphs/contributors) who participated in this project.
 
 ## License
 
