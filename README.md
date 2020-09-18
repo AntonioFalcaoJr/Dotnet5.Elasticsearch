@@ -11,13 +11,13 @@ After the project clone follow the steps described in the [installing](#installi
 > HTTPS
 >
 >```bash
->git clone https://git-unj.softplan.com.br/antonio.falcao/Dotnet5.Elasticsearch.git
+>git clone https://github.com/AntonioFalcao/Dotnet5.Elasticsearch.git
 >```
 >
 > SSH
 >
 >```bash
->git clone git@git-unj.softplan.com.br:antonio.falcao/Dotnet5.Elasticsearch.git
+>git clone git@github.com:AntonioFalcao/Dotnet5.Elasticsearch.git
 >```
 
 ### Prerequisites
