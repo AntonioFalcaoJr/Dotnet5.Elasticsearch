@@ -11,6 +11,6 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0-preview.4-runtime.20202.6"/>
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0-preview.4-runtime.20202.6"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0"/>
     </ItemGroup>
 </Project>
