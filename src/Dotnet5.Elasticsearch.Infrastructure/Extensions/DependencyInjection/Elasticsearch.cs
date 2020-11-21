@@ -65,7 +65,7 @@ namespace Dotnet5.Elasticsearch.Infrastructure.Extensions.DependencyInjection
             => HttpPolicyExtensions.HandleTransientHttpError()
                .OrResult(httpResponseMessage => GetHttpStatusCodesWorthRetrying().Contains(httpResponseMessage.StatusCode))
                .WaitAndRetryAsync(RetryAttempt, retryAttempt
-                    => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)), (result, timeSpan, attempt, context)
+                    => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)), (result, timeSpan, attempt, _)
                     => provider.GetService<ILogger<IElasticClient>>().LogWarning(GetRetryMessage(timeSpan, attempt, result)));
     }
 }

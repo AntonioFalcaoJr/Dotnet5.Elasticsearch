@@ -96,8 +96,7 @@ namespace Dotnet5.Elasticsearch.Services.Abstractions
         protected IEnumerable<TEntity> OnGetAll(Expression<Func<TEntity, bool>> predicate = default)
             => _repository.GetAll(predicate);
 
-        protected async Task<IEnumerable<TEntity>> OnGetAllAsync(CancellationToken cancellationToken, Expression<Func<TEntity, bool>> predicate =
-            default)
+        protected async Task<IEnumerable<TEntity>> OnGetAllAsync(CancellationToken cancellationToken, Expression<Func<TEntity, bool>> predicate = default)
             => await _repository.GetAllAsync(predicate, cancellationToken);
 
         protected TEntity OnGetById(TId id) => Equals(id, default(TId)) ? default : _repository.GetById(id);

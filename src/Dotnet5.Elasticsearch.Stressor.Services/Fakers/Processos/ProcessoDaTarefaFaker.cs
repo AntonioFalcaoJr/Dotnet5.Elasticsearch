@@ -15,7 +15,7 @@ namespace Dotnet5.Elasticsearch.Stressor.Services.Fakers.Processos
                .RuleFor(x => x.Area, f => f.Lorem.Word())
                .RuleFor(x => x.Assunto, f => f.Lorem.Sentence())
                .RuleFor(x => x.Classe, f => f.Lorem.Sentence(4))
-               .RuleFor(x => x.Id, f => Guid.NewGuid())
+               .RuleFor(x => x.Id, _ => Guid.NewGuid())
                .RuleFor(x => x.ParteAtiva, ParteDoProcessoDaTarefaFaker.ParteDoProcesso.Generate())
                .RuleFor(x => x.PartePassiva, ParteDoProcessoDaTarefaFaker.ParteDoProcesso.Generate());
     }

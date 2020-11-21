@@ -12,6 +12,6 @@ namespace Dotnet5.Elasticsearch.Stressor.Services.Fakers.Manifestacoes
         public static readonly Faker<Transferencia> Transferencia =
             new Faker<Transferencia>()
                .RuleFor(x => x.Situacao, f => f.Random.ListItem(Situacoes))
-               .RuleFor(x => x.Id, f => Guid.NewGuid());
+               .RuleFor(x => x.Id, _ => Guid.NewGuid());
     }
 }
