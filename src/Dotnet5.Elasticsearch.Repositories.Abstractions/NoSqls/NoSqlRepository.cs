@@ -15,9 +15,9 @@ namespace Dotnet5.Elasticsearch.Repositories.Abstractions.NoSqls
         where TId : struct
     {
         private readonly IElasticClient _elasticClient;
-        private readonly ILogger<NoSqlRepository<TEntity, TId>> _logger;
+        private readonly ILogger _logger;
 
-        protected NoSqlRepository(IElasticClient elasticClient, ILogger<NoSqlRepository<TEntity, TId>> logger)
+        protected NoSqlRepository(IElasticClient elasticClient, ILogger logger)
         {
             _elasticClient = elasticClient;
             _logger = logger;
@@ -109,8 +109,7 @@ namespace Dotnet5.Elasticsearch.Repositories.Abstractions.NoSqls
             return response?.Documents;
         }
 
-        public virtual async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate = default, CancellationToken
-            cancellationToken = default)
+        public virtual async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate = default, CancellationToken cancellationToken = default)
         {
             var response = await _elasticClient.SearchAsync<TEntity>(searchDescriptor
                 => searchDescriptor.MatchAll(), cancellationToken);

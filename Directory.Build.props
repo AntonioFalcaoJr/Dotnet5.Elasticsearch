@@ -1,0 +1,27 @@
+﻿<Project>
+    <PropertyGroup Label="Common properties">
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>9</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Packages dependency versions">
+
+        <!--Microsoft-->
+        <Microsoft_Extensions_Version>5.0.0</Microsoft_Extensions_Version>
+
+        <!--EF Core-->
+        <Microsoft_EntityFrameworkCore_Version>5.0.0</Microsoft_EntityFrameworkCore_Version>
+
+        <!--Polly-->
+        <Polly_Version>7.2.1</Polly_Version>
+        <Polly_Extensions_Version>3.0.0</Polly_Extensions_Version>
+        
+        <!--Nest-->
+        <Nest_Version>7.8.1</Nest_Version>
+
+        <!--AutoMapper-->
+        <AutoMapper_DependencyInjection_Version>8.1.0</AutoMapper_DependencyInjection_Version>
+        <AutoMapper_Version>10.1.1</AutoMapper_Version>
+       
+    </PropertyGroup>
+</Project>

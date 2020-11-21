@@ -9,7 +9,7 @@ namespace Dotnet5.Elasticsearch.Repositories
 {
     public class CardNoSqlRepository : NoSqlRepository<Card, Guid>, ICardNoSqlRepository
     {
-        public CardNoSqlRepository(IElasticClient elasticClient, ILogger<NoSqlRepository<Card, Guid>> logger)
+        public CardNoSqlRepository(IElasticClient elasticClient, ILogger logger)
             : base(elasticClient, logger) { }
     }
 }

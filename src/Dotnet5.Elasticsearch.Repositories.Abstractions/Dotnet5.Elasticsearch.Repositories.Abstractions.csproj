@@ -1,12 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
-        <LangVersion>preview</LangVersion>
-    </PropertyGroup>
-
     <ItemGroup>
-        <PackageReference Include="NEST" Version="7.8.1" />
+        <PackageReference Include="NEST" Version="$(Nest_Version)" />
     </ItemGroup>
 
     <ItemGroup>
@@ -15,7 +10,7 @@
 
     <ItemGroup>
       <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
-        <HintPath>..\..\..\..\..\..\usr\share\dotnet\packs\Microsoft.AspNetCore.App.Ref\5.0.0-preview.5.20279.2\ref\net5.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+        <HintPath>..\..\..\..\..\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\5.0.0\ref\net5.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
       </Reference>
     </ItemGroup>
 

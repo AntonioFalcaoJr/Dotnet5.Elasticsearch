@@ -11,6 +11,6 @@ namespace Dotnet5.Elasticsearch.Stressor.Services.Fakers.Manifestacoes
            .RuleFor(x => x.Email, f => f.Internet.Email())
            .RuleFor(x => x.Nome, f => f.Name.FullName())
            .RuleFor(x => x.DataDeNascimento, f => f.Person.DateOfBirth)
-           .RuleFor(x => x.Id, f => Guid.NewGuid());
+           .RuleFor(x => x.Id, _ => Guid.NewGuid());
     }
 }

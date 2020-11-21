@@ -51,18 +51,18 @@ namespace Dotnet5.Elasticsearch.Client.Services
 
         public override IEnumerable<Card> GetAll(Expression<Func<Card, bool>> predicate = default)
         {
-            var cards = OnGetAll(predicate);
-            if (cards?.Any() is false) return default;
-            _logger.LogInformation($"Restored {cards.Count()} documents");
+            var cards = OnGetAll(predicate).ToList();
+            if (cards.Any() is false) return default;
+            _logger.LogInformation($"Restored {cards.Count} documents");
             return cards;
         }
 
         public override async Task<IEnumerable<Card>> GetAllAsync(CancellationToken cancellationToken,
             Expression<Func<Card, bool>> predicate = default)
         {
-            var cards = await OnGetAllAsync(cancellationToken, predicate);
-            if (cards?.Any() is false) return default;
-            _logger.LogInformation($"Restored {cards.Count()} documents");
+            var cards = (await OnGetAllAsync(cancellationToken, predicate)).ToList();
+            if (cards.Any() is false) return default;
+            _logger.LogInformation($"Restored {cards.Count} documents");
             return cards;
         }
 
