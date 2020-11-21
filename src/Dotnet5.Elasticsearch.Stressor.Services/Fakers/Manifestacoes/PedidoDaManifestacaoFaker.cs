@@ -7,7 +7,7 @@ namespace Dotnet5.Elasticsearch.Stressor.Services.Fakers.Manifestacoes
     {
         public static readonly Faker<Pedido> PedidoDaManifestacao =
             new Faker<Pedido>()
-               .RuleFor(x => x.DocumentoDeSolicitacao, _ => DocumentoFaker.Documento.Generate())
-               .RuleFor(x => x.DocumentoDeResposta, _ => DocumentoFaker.Documento.Generate());
+                .RuleFor(x => x.DocumentoDeSolicitacao, _ => DocumentoFaker.Documento.Generate())
+                .RuleFor(x => x.DocumentoDeResposta, _ => DocumentoFaker.Documento.Generate());
     }
 }

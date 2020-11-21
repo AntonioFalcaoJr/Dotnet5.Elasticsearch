@@ -33,7 +33,7 @@ namespace Dotnet5.Elasticsearch.Client.WebApi
             services.AddApiVersioning();
 
             services.AddMvc()
-               .AddJsonOptions(options =>
+                .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                     options.JsonSerializerOptions.IgnoreNullValues = false;

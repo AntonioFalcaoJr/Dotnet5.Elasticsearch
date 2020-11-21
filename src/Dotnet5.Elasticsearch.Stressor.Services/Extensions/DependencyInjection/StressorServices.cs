@@ -7,6 +7,6 @@ namespace Dotnet5.Elasticsearch.Stressor.Services.Extensions.DependencyInjection
     {
         public static void AddServices(this IServiceCollection services)
             => services.AddScoped<ICardClient, CardClient>()
-               .AddScoped<IStressorService, StressorService>();
+                .AddScoped<IStressorService, StressorService>();
     }
 }

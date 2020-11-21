@@ -36,7 +36,7 @@ namespace Dotnet5.Elasticsearch.Stressor.WebApi
                 => options.Uri = new Uri(Configuration["ElasticsearchClient:Url"]));
 
             services.AddMvc()
-               .AddJsonOptions(options =>
+                .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                     options.JsonSerializerOptions.IgnoreNullValues = false;

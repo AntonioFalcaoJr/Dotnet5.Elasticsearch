@@ -8,7 +8,7 @@ namespace Dotnet5.Elasticsearch.Stressor.Services.Fakers.Processos
     {
         public static readonly Faker<Parte> ParteDoProcesso =
             new Faker<Parte>()
-               .RuleFor(x => x.Id, _ => Guid.NewGuid())
-               .RuleFor(x => x.Nome, f => f.Name.FullName());
+                .RuleFor(x => x.Id, _ => Guid.NewGuid())
+                .RuleFor(x => x.Nome, f => f.Name.FullName());
     }
 }

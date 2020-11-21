@@ -12,8 +12,8 @@ namespace Dotnet5.Elasticsearch.Stressor.Services.Fakers.Manifestacoes
 
         public static readonly Faker<Redistribuicao> Redistribuicao =
             new Faker<Redistribuicao>()
-               .RuleFor(x => x.Situacao, f => f.Random.ListItem(Situacoes))
-               .RuleFor(x => x.Tipo, f => f.Random.ListItem(Tipos))
-               .RuleFor(x => x.Id, _ => Guid.NewGuid());
+                .RuleFor(x => x.Situacao, f => f.Random.ListItem(Situacoes))
+                .RuleFor(x => x.Tipo, f => f.Random.ListItem(Tipos))
+                .RuleFor(x => x.Id, _ => Guid.NewGuid());
     }
 }

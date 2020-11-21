@@ -11,7 +11,7 @@ namespace Dotnet5.Elasticsearch.Repositories.Abstractions.Extensions
             var responseBase = response as ResponseBase;
             if (responseBase?.IsValid ?? true) return;
             logger.LogError(responseBase.ServerError?.Error.ToString()
-                ?? responseBase.ApiCall?.DebugInformation);
+                            ?? responseBase.ApiCall?.DebugInformation);
         }
     }
 }

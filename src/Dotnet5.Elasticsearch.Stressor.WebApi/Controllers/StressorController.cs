@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Dotnet5.Elasticsearch.Stressor.WebApi.Controllers
 {
-    [ApiController, Route("[controller]/[action]")]
+    [ApiController]
+    [Route("[controller]/[action]")]
     public class StressorController : ControllerBase
     {
         private readonly IStressorService _stressorService;

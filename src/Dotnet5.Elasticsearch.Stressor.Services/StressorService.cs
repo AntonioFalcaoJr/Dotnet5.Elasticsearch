@@ -30,7 +30,7 @@ namespace Dotnet5.Elasticsearch.Stressor.Services
 
                 foreach (var cardModel in result.Where(x => x.IsValid is false))
                     _logger.LogError($"{cardModel.Card?.Notification?.Error} "
-                        + $"| {cardModel.Notification?.Error}");
+                                     + $"| {cardModel.Notification?.Error}");
             }
 
             _logger.LogInformation($"{amount} fake cards generated");
