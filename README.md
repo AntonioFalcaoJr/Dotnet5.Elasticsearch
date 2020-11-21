@@ -2,7 +2,7 @@
 
 ***WIP - Work in progress***
 
-This project aims to explore how NEST works with Elasticsearch in .NET 5 projects.
+This project aims to explore how **NEST** works with **Elasticsearch** in **.NET 5** projects.
 
 ## Getting Started
 
@@ -60,7 +60,7 @@ Is important to say, if occurrence problems with max virtual memory area:
 ```bash
 docker logs es01
 
-# comment for brevity
+# abbreviated
 
 ERROR: [1] bootstrap checks failed
 [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
@@ -86,14 +86,14 @@ The **Kibana** service will be available in default host `http://localhost:5601`
       ELASTICSEARCH_URL: http://es01:9200
       ELASTICSEARCH_HOSTS: http://es01:9200
 
-# comment for brevity
+# abbreviated
 ```
 
 #### App settings
 
 After providing the necessary infrastructure, we need to define the cluster **index** and **nodes** addresses on the [`appsettings`](./src/Dotnet5.Elasticsearch.Client.WebApi/appsettings.json) from the [`Elasticsearch.Client.WebApi`](./src/Dotnet5.Elasticsearch.Client.WebApi) project.
 
-```json
+```json5
 {
   "Elasticsearch": {
     "index": "card",
@@ -106,7 +106,7 @@ After providing the necessary infrastructure, we need to define the cluster **in
 
 And then set the HTTP client host on [`appsettings`](./src/Dotnet5.Elasticsearch.Stressor.WebApi/appsettings.json) from [`Elasticsearch.Stressor.WebApi`](./src/Dotnet5.Elasticsearch.Stressor.WebApi) project.
 
-```json
+```json5
 {
   "ElasticsearchClient": {
     "Url": "http://localhost:5000"
@@ -128,8 +128,9 @@ The **Stressor** service provide  resources to request  _generate_, _modify_, an
 
 Is just run the compose from the app to up both of then in the same network. In this way is possible to use services names on the [appsettings](#app-settings).
 
-> The **Client** routing uses the default `http://hostname:port/api/v{version}/controller`. Where  **/v1** is Synchronous and **/v2** is Asynchronous.
->
+> The **Client** routing uses the default `http://hostname:port/api/v{version}/controller`,  
+> where **/v1** is Synchronous and **/v2** is Asynchronous.
+
 > The **Stressor** routing uses the default `http://hostname:port/controller/action`.
 
 To make API calls, you can use the file [./basic-api-call.http](./basic-api-call.http) through extension [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client):
@@ -142,7 +143,8 @@ GET http://localhost:6000/stressor/generate?amount=10
 GET http://localhost:6000/stressor/modify?amount=10
 ###
 GET http://localhost:6000/stressor/exclude?amount=10
-
+```
+```http request
 # CLIENT
 ###
 GET http://localhost:5000/api/v2/card
@@ -152,7 +154,7 @@ GET http://localhost:5000/api/v2/card/f694491b-bc98-45bc-af97-67f7ac460908
 
 ## Built With
 
-### Microsoft Stack
+### .NET Stack
 
 * [.NET 5](https://dotnet.microsoft.com/) - The base framework used
 * [ASP.NET 5](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) - The web framework used
