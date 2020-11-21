@@ -1,6 +1,6 @@
 # .NET 5 + Elasticsearch + NEST
 
-***WIP - Work in progress***
+![.NET Core](https://github.com/AntonioFalcao/Dotnet5.Elasticsearch/workflows/.NET%20Core/badge.svg?branch=master)
 
 This project aims to explore how **NEST** works with **Elasticsearch** in **.NET 5** projects.
 
