@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
-        <PackageReference Include="Bogus" Version="32.0.2"/>
+        <PackageReference Include="Bogus" Version="32.1.1"/>
         <PackageReference Include="Microsoft.Extensions.Http" Version="$(Microsoft_Extensions_Version)"/>
         <PackageReference Include="Microsoft.Extensions.Logging" Version="$(Microsoft_Extensions_Version)"/>
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3"/>
