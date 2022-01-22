@@ -13,7 +13,7 @@
         <Microsoft_EntityFrameworkCore_Version>5.0.0</Microsoft_EntityFrameworkCore_Version>
 
         <!--Polly-->
-        <Polly_Version>7.2.2</Polly_Version>
+        <Polly_Version>7.2.3</Polly_Version>
         <Polly_Extensions_Version>3.0.0</Polly_Extensions_Version>
         
         <!--Nest-->
