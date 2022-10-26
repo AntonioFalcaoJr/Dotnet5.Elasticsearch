@@ -21,7 +21,7 @@
 
         <!--AutoMapper-->
         <AutoMapper_DependencyInjection_Version>11.0.0</AutoMapper_DependencyInjection_Version>
-        <AutoMapper_Version>11.0.0</AutoMapper_Version>
+        <AutoMapper_Version>12.0.0</AutoMapper_Version>
        
     </PropertyGroup>
 </Project>
