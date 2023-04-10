@@ -1,4 +1,4 @@
-﻿<Project>
+<Project>
     <PropertyGroup Label="Common properties">
         <TargetFramework>net5.0</TargetFramework>
         <LangVersion>9</LangVersion>
@@ -20,7 +20,7 @@
         <Nest_Version>7.17.5</Nest_Version>
 
         <!--AutoMapper-->
-        <AutoMapper_DependencyInjection_Version>11.0.0</AutoMapper_DependencyInjection_Version>
+        <AutoMapper_DependencyInjection_Version>12.0.1</AutoMapper_DependencyInjection_Version>
         <AutoMapper_Version>11.0.0</AutoMapper_Version>
        
     </PropertyGroup>
